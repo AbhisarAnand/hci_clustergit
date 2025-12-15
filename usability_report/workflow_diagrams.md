@@ -43,6 +43,7 @@ flowchart TD
     style WarningQuota fill:#f9f,stroke:#333,stroke-width:2px
     style ToastCancel fill:#ff9,stroke:#333,stroke-width:2px
     style ErrorNet fill:#f99,stroke:#333,stroke-width:2px
+```
 
 ## 2. Admin Quota Management Flow
 This diagram details the administrative workflow for monitoring user storage and resetting quotas, emphasizing the "Error Prevention" (H5) confirmation step.
@@ -76,6 +77,7 @@ flowchart TD
     style ShowModal fill:#f9f,stroke:#333,stroke-width:2px
     style ToastSuccess fill:#9f9,stroke:#333,stroke-width:2px
     style ToastError fill:#f99,stroke:#333,stroke-width:2px
+```
 
 ## 3. Student File History & Version Control Flow
 This diagram illustrates the user journey for managing file versions, covering the requirements for "User Control and Freedom" (H3) via the ability to revert changes.
@@ -109,6 +111,4 @@ flowchart TD
     style ConfirmRevert fill:#f9f,stroke:#333,stroke-width:2px
     style ToastRevert fill:#9f9,stroke:#333,stroke-width:2px
     style DiffView fill:#ddf,stroke:#333,stroke-width:2px
-```
-```
 ```
