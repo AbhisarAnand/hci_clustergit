@@ -43,4 +43,72 @@ flowchart TD
     style WarningQuota fill:#f9f,stroke:#333,stroke-width:2px
     style ToastCancel fill:#ff9,stroke:#333,stroke-width:2px
     style ErrorNet fill:#f99,stroke:#333,stroke-width:2px
+
+## 2. Admin Quota Management Flow
+This diagram details the administrative workflow for monitoring user storage and resetting quotas, emphasizing the "Error Prevention" (H5) confirmation step.
+
+```mermaid
+flowchart TD
+    Start([Admin Views Users]) --> LoadData[Fetch User List]
+    LoadData --> DisplayTable[Render User Table]
+    
+    DisplayTable --> Action{Admin Action}
+    Action -- View Usage --> Tooltip[Hover: Storage %]
+    Action -- Filter/Search --> FilterList[Update Table View]
+    
+    Action -- Reset Quota --> ClickReset[Click 'Reset Quota']
+    ClickReset --> ShowModal{Confirmation Modal}
+    
+    ShowModal -- Cancel/Close --> CloseModal[Close Modal]
+    CloseModal --> DisplayTable
+    
+    ShowModal -- Confirm --> InitReset[Processing Reset...]
+    
+    InitReset --> SimError{Simulate API Error?}
+    
+    SimError -- Yes --> ToastError[Show Toast: Reset Failed]
+    ToastError --> DisplayTable
+    
+    SimError -- No --> Success[Update User State]
+    Success --> ToastSuccess[Show Toast: Quota Reset Successfully]
+    ToastSuccess --> UpdateUI[Refetch/Update Table Row]
+    
+    style ShowModal fill:#f9f,stroke:#333,stroke-width:2px
+    style ToastSuccess fill:#9f9,stroke:#333,stroke-width:2px
+    style ToastError fill:#f99,stroke:#333,stroke-width:2px
+
+## 3. Student File History & Version Control Flow
+This diagram illustrates the user journey for managing file versions, covering the requirements for "User Control and Freedom" (H3) via the ability to revert changes.
+
+```mermaid
+flowchart TD
+    Start([User Selects File]) --> ClickAction[Click 'Actions' Menu]
+    ClickAction --> SelectHistory[Select 'View History']
+    
+    SelectHistory --> LoadVersions[Fetch Version List]
+    LoadVersions --> ShowTimeline[Display Version Timeline]
+    
+    ShowTimeline --> UserChoice{User Selection}
+    
+    UserChoice -- View --> ViewContent[Open File Preview]
+    ViewContent --> Back[Back to Timeline]
+    
+    UserChoice -- Compare --> DiffView[Show Diff vs Current]
+    DiffView --> Back
+    
+    UserChoice -- Revert --> ClickRevert[Click 'Revert to Version']
+    ClickRevert --> ConfirmRevert{Confirmation Modal}
+    
+    ConfirmRevert -- Cancel --> Back
+    ConfirmRevert -- Confirm --> ProcessRevert[Restoring Version...]
+    
+    ProcessRevert --> RevertSuccess[Update Main File Pointer]
+    RevertSuccess --> ToastRevert[Show Toast: File Reverted]
+    ToastRevert --> UpdateList[Refresh File List]
+    
+    style ConfirmRevert fill:#f9f,stroke:#333,stroke-width:2px
+    style ToastRevert fill:#9f9,stroke:#333,stroke-width:2px
+    style DiffView fill:#ddf,stroke:#333,stroke-width:2px
+```
+```
 ```
