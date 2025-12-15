@@ -15,17 +15,17 @@ This progression from wireframes to finished mockups maintained the core HCI goa
 ### 1. Student Dashboard: Wireframe vs. High-Fidelity
 | Low-Fidelity Wireframe | Final High-Fidelity Prototype |
 |:---:|:---:|
-| ![Wireframe Dashboard](wireframe_student_dashboard.png) | ![Final Dashboard](dashboard_student_h2_h4_1765595246193.png) |
+| ![Wireframe Dashboard](wireframes/wireframe_student_dashboard.png) | ![Final Dashboard](screenshots/dashboard_student_h2_h4_1765595246193.png) |
 | *Initial concept focusing on layout and storage summary.* | *Final design with polished typography, dark mode, and real-time status.* |
 
 ### 2. Upload Modal: Wireframe vs. High-Fidelity
 | Low-Fidelity Wireframe | Final High-Fidelity Prototype |
 |:---:|:---:|
-| ![Wireframe Upload](wireframe_upload_modal.png) | ![Final Upload](upload_modal_h1_h3_1765595274634.png) |
+| ![Wireframe Upload](wireframes/wireframe_upload_modal.png) | ![Final Upload](screenshots/upload_modal_h1_h3_1765595274634.png) |
 | *Concept for modal interaction and drop zone.* | *Implemented modal with unified progress feedback and cancel actions.* |
 
 ### 3. Admin Quota Management: Wireframe vs. High-Fidelity
 | Low-Fidelity Wireframe | Final High-Fidelity Prototype |
 |:---:|:---:|
-| ![Wireframe Admin](wireframe_admin_quota.png) | ![Final Admin](admin_confirmation_h5_1765595373549.png) |
+| ![Wireframe Admin](wireframes/wireframe_admin_quota.png) | ![Final Admin](screenshots/admin_confirmation_h5_1765595373549.png) |
 | *Sketching the reset flow and confirmation safety.* | *Final interface showing the "Error Prevention" modal in action.* |
